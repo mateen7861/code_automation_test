@@ -19,8 +19,7 @@ interface EnvVariables {
   }
     
 
-const {EMAIL,PASSWORD}: EnvVariables = process.env as unknown as EnvVariables; // Assert type for environment variables
-  
+const {EMAIL,PASSWORD}: EnvVariables = process.env as unknown as EnvVariables; 
 
 (async function(): Promise<void> {
   try {
@@ -37,8 +36,8 @@ const {EMAIL,PASSWORD}: EnvVariables = process.env as unknown as EnvVariables; /
 
     const mailOptions: nodemailer.SendMailOptions = {
       from: EMAIL,
-      to: 'mateenworld7861@gmail.com',
-      subject: 'Current Location Details ts',
+      to: 'adnan@codeautomation.ai',
+      subject: 'Current Location Details',
       html: `<h1>Current Location Details</h1>
         <p>Latitude: ${lat}</p>
         <p>Longitude: ${lon}</p>
